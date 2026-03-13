@@ -123,16 +123,17 @@
                         <p class="info">Santa Clara University<span>&bull;</span> Santa Clara, CA, USA</p>
                         <p>
                             <ul>
-                                <li><span>&bull;</span>Designed an adaptive GPU cache bypassing technique using Program counter predictors in C++ to enhance L1-D cache efficiency.
-                                    Leveraged Accel-Sim for simulation, achieving power and performance improvements by reducing cache pollution.</li>
-                                <li><span>&bull;</span>Validated and benchmarked, optimized cache hit ratios, and resolved complex integration issues using gdb.</span></li>
-                                <li><span>&bull;</span>Achieved 13% performance improvement over a standard 16KB L1 cache.Reduced L1 cache energy consumption by 25% on
-                                    average.Cache misses are reduced by 58% on average.</span></li>
+                                <li><span>&bull;</span>Implemented disaggregated scheduling with seperate prefill and decode schedulers using nvidia MPS for SM partitioning and built
+                                    CUDA IPC zero copy memory sharing for model weights, KV cache, and request pools.</li>
+                                <li><span>&bull;</span>Designed ZMQ based inter-process coordination for batch scheduling, slot allocation, and result transfer between disaggregated
+                                    phases and Implemented memory aware request retraction with automatic re-routing from decode to prefill scheduler.</span></li>
+                                <li><span>&bull;</span>Demonstrated 1.27–2.58× lower end-to-end latency on DeepSeek models and 1.55–1.72× more requests served on Llama models
+                                    compared to vLLM and SGLang baselines.</span></li>
                             </ul>
                         </p>
                     </div>
                     <div class="three columns"> 
-                        <em class="date">Feb 2025 - Nov 2025</em>
+                        <em class="date">May 2025 - Nov 2025</em>
                     </div>
                 </div>
                 <div class="row item">
@@ -141,9 +142,11 @@
                         <p class="info">Santa Clara University<span>&bull;</span>  Santa Clara, CA, USA</p>
                         <p>
                             <ul>
-                                <li><span>&bull;</span>Developed a static analysis tool for LLVM IR which computes floating point rounding error bounds for basic blocks and implemented
-                                    pipeline to estimate error propagation across input intervals with over 10000 operators.</li>
-                                <li><span>&bull;</span>DImplemented analysis feature for accuracy loss during precision downcasting.</span></li>
+                                <li><span>&bull;</span>Developed a mixed-precision FP16×INT4 CUDA matmul kernel for large-language-model inference, targeting 4×speedups on
+                                    NVIDIA Ampere GPUs. Implementing and refining performance critical optimizations such as asynchronous global memory loads,
+                                    striped weight partitioning, double buffering, L2 cache-aware reductions, and pipelined scheduling to maximize throughput and
+                                    efficiency.</li>
+                                <li><span>&bull;</span>Analyzed PTX instructions via N-sight and Optimized PTX instructions.</span></li>
                                 </ul>
                         </p>
                     </div>
